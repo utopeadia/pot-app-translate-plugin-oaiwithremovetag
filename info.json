@@ -1,36 +1,88 @@
 {
-  "id": "plugin.com.pot-app.lingva",
+  "id": "plugin.com.utopeadia.oaiwithremovetag",
   "plugin_type": "translate",
-  "icon": "lingva.svg",
-  "display": "Lingva",
-  "homepage": "https://github.com/pot-app/pot-app-translate-plugin-template",
-  "needs": [{ "key": "requestPath", "display": "请求地址" }],
+  "icon": "openai.svg",
+  "display": "OAINoTag",
+  "homepage": "https://github.com/utopeadia/pot-app-translate-plugin-oaiwithremovetag",
+  "needs": [
+    {
+      "key": "requestPath",
+      "display": "请求路径",
+      "type": "input"
+    },
+    {
+      "key": "model",
+      "display": "Model",
+      "type": "input"
+    },
+    {
+      "key": "apiKey",
+      "display": "API Key",
+      "type": "input"
+    },
+    {
+      "key": "system_prompt",
+      "display": "System Prompt",
+      "type": "input"
+    },
+    {
+      "key": "user_prompt",
+      "display": "User Prompt",
+      "type": "input"
+    },
+    {
+      "key": "parameters",
+      "display": "Parameters (default: {\"temperature\": 0.1})",
+      "type": "input"
+    },
+    {
+      "key": "removeTag",
+      "display": "移除“<标签>”内的内容 (default: {<think>,<help>})",
+      "type": "input",
+      "default": "<think>,<help>"
+    },
+    {
+      "key": "use_stream",
+      "display": "启用流式输出 / Enable streaming",
+      "type": "select",
+      "options": {
+        "true": "是 / Yes",
+        "false": "否 / No"
+      }
+    }
+  ],
   "language": {
-    "auto": "auto",
-    "zh_cn": "zh",
-    "zh_tw": "zh_HANT",
-    "en": "en",
-    "ja": "ja",
-    "ko": "ko",
-    "fr": "fr",
-    "es": "es",
-    "ru": "ru",
-    "de": "de",
-    "it": "it",
-    "tr": "tr",
-    "pt_pt": "pt",
-    "pt_br": "pt",
-    "vi": "vi",
-    "id": "id",
-    "th": "th",
-    "ms": "ms",
-    "ar": "ar",
-    "hi": "hi",
-    "mn_cy": "mn",
-    "mn_mo": "mn",
-    "km": "km",
-    "nb_no": "no",
-    "nn_no": "no",
-    "fa": "fa"
+    "auto": "Auto",
+    "zh_cn": "Simplified Chinese",
+    "zh_tw": "Traditional Chinese",
+    "yue": "Cantonese",
+    "ja": "Japanese",
+    "en": "English",
+    "ko": "Korean",
+    "fr": "French",
+    "es": "Spanish",
+    "ru": "Russian",
+    "de": "German",
+    "it": "Italian",
+    "tr": "Turkish",
+    "pt_pt": "Portuguese",
+    "pt_br": "Brazilian Portuguese",
+    "vi": "Vietnamese",
+    "id": "Indonesian",
+    "th": "Thai",
+    "ms": "Malay",
+    "ar": "Arabic",
+    "hi": "Hindi",
+    "mn_mo": "Mongolian",
+    "mn_cy": "Mongolian(Cyrillic)",
+    "km": "Khmer",
+    "nb_no": "Norwegian Bokmål",
+    "nn_no": "Norwegian Nynorsk",
+    "fa": "Persian",
+    "sv": "Swedish",
+    "pl": "Polish",
+    "nl": "Dutch",
+    "uk": "Ukrainian",
+    "he": "Hebrew"
   }
 }
