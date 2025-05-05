@@ -90,7 +90,6 @@ async function translate(text, from, to, options) {
         const response = await fetch(requestPath, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
                 'Authorization': `Bearer ${apiKey}`
             },
             // Use Body.json to correctly serialize the body
